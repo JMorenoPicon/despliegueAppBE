@@ -1,0 +1,19 @@
+{
+  "name": "f1-api",
+  "version": "1.0.0",
+  "description": "API REST de Fórmula 1",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mongodb": "^6.13.0",
+    "mongoose": "^8.10.1"
+  }
+}
