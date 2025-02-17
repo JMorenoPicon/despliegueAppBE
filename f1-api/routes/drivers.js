@@ -15,9 +15,9 @@ router.get('/', async (req, res) => {
 
 // Crear un nuevo piloto
 router.post('/', async (req, res) => {
-  const { name, team, nationality, points, imageUrl } = req.body;
+  const { name, team, nationality, points } = req.body;
 
-  const newDriver = new Driver({ name, team, nationality, points, imageUrl });
+  const newDriver = new Driver({ name, team, nationality, points });
 
   try {
     const savedDriver = await newDriver.save();
