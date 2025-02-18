@@ -6,7 +6,7 @@ const app = express();
 const port = 5000;
 
 // Conectar a MongoDB (con tu URI de Mongo Atlas)
-mongoose.connect('mongodb+srv://standardUser:admin@f1cluster.e2owb.mongodb.net/?retryWrites=true&w=majority&appName=f1Cluster', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb+srv://standardUser:admin@f1cluster.e2owb.mongodb.net/f1db?retryWrites=true&w=majority&appName=f1Cluster', { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("Conectado a MongoDB"))
   .catch(err => console.log("Error al conectar a MongoDB", err));
 

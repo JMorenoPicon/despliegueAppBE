@@ -27,6 +27,18 @@ router.post('/', async (req, res) => {
   }
 });
 
+//Creacion masiva de pilotos
+router.post('/bulk', async (req, res) => {
+  const drivers = req.body;
+
+  try {
+    const savedDrivers = await Driver.insertMany(drivers);
+    res.status(201).json({ success: true, data: savedDrivers });
+  } catch (err) {
+    res.status(400).json({ success: false, message: err.message });
+  }
+});
+
 // Eliminar un piloto por ID
 router.delete('/:id', async (req, res) => {
   const { id } = req.params;

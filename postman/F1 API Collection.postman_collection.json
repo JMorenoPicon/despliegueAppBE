@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "5692edf4-f99a-4581-b182-46b9302c5b78",
+		"name": "F1 API Collection",
+		"description": "Colección de peticiones para probar la API REST de Fórmula 1.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39236408"
+	},
+	"item": [
+		{
+			"name": "Get All Drivers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/drivers",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"drivers"
+					]
+				},
+				"description": "Obtiene la lista de todos los pilotos"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Driver",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Lewis Hamilton\", \"team\": \"Mercedes\", \"nationality\": \"British\", \"points\": 25}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/api/drivers",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"drivers"
+					]
+				},
+				"description": "Crea un nuevo piloto"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Driver",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/api/drivers/:id",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"drivers",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id"
+						}
+					]
+				},
+				"description": "Elimina un piloto por ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Generate all drivers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n  {\n    \"name\": \"Max Verstappen\",\n    \"team\": \"Red Bull Racing\",\n    \"nationality\": \"Dutch\",\n    \"points\": 0,\n    \"imageUrl\": \"https://example.com/max_verstappen.jpg\"\n  },\n  {\n    \"name\": \"Charles Leclerc\",\n    \"team\": \"Ferrari\",\n    \"nationality\": \"Monegasque\",\n    \"points\": 0,\n    \"imageUrl\": \"https://example.com/charles_leclerc.jpg\"\n  },\n  {\n    \"name\": \"Sergio Pérez\",\n    \"team\": \"Red Bull Racing\",\n    \"nationality\": \"Mexican\",\n    \"points\": 0,\n    \"imageUrl\": \"https://example.com/sergio_perez.jpg\"\n  },\n  {\n    \"name\": \"Carlos Sainz\",\n    \"team\": \"Ferrari\",\n    \"nationality\": \"Spanish\",\n    \"points\": 0,\n    \"imageUrl\": \"https://example.com/carlos_sainz.jpg\"\n  },\n  {\n    \"name\": \"Lando Norris\",\n    \"team\": \"McLaren\",\n    \"nationality\": \"British\",\n    \"points\": 0,\n    \"imageUrl\": \"https://example.com/lando_norris.jpg\"\n  },\n  {\n    \"name\": \"Daniel Ricciardo\",\n    \"team\": \"AlphaTauri\",\n    \"nationality\": \"Australian\",\n    \"points\": 0,\n    \"imageUrl\": \"https://example.com/daniel_ricciardo.jpg\"\n  },\n  {\n    \"name\": \"Esteban Ocon\",\n    \"team\": \"Alpine\",\n    \"nationality\": \"French\",\n    \"points\": 0,\n    \"imageUrl\": \"https://example.com/esteban_ocon.jpg\"\n  },\n  {\n    \"name\": \"Pierre Gasly\",\n    \"team\": \"Alpine\",\n    \"nationality\": \"French\",\n    \"points\": 0,\n    \"imageUrl\": \"https://example.com/pierre_gasly.jpg\"\n  },\n  {\n    \"name\": \"Fernando Alonso\",\n    \"team\": \"Aston Martin\",\n    \"nationality\": \"Spanish\",\n    \"points\": 0,\n    \"imageUrl\": \"https://example.com/fernando_alonso.jpg\"\n  },\n  {\n    \"name\": \"Lance Stroll\",\n    \"team\": \"Aston Martin\",\n    \"nationality\": \"Canadian\",\n    \"points\": 0,\n    \"imageUrl\": \"https://example.com/lance_stroll.jpg\"\n  },\n  {\n    \"name\": \"Zhou Guanyu\",\n    \"team\": \"Alfa Romeo\",\n    \"nationality\": \"Chinese\",\n    \"points\": 0,\n    \"imageUrl\": \"https://example.com/zhou_guanyu.jpg\"\n  },\n  {\n    \"name\": \"Valtteri Bottas\",\n    \"team\": \"Alfa Romeo\",\n    \"nationality\": \"Finnish\",\n    \"points\": 0,\n    \"imageUrl\": \"https://example.com/valtteri_bottas.jpg\"\n  },\n  {\n    \"name\": \"Nicholas Latifi\",\n    \"team\": \"Williams\",\n    \"nationality\": \"Canadian\",\n    \"points\": 0,\n    \"imageUrl\": \"https://example.com/nicholas_latifi.jpg\"\n  },\n  {\n    \"name\": \"Alex Albon\",\n    \"team\": \"Williams\",\n    \"nationality\": \"Thai-British\",\n    \"points\": 0,\n    \"imageUrl\": \"https://example.com/alex_albon.jpg\"\n  },\n  {\n    \"name\": \"Mick Schumacher\",\n    \"team\": \"Haas\",\n    \"nationality\": \"German\",\n    \"points\": 0,\n    \"imageUrl\": \"https://example.com/mick_schumacher.jpg\"\n  },\n  {\n    \"name\": \"Kevin Magnussen\",\n    \"team\": \"Haas\",\n    \"nationality\": \"Danish\",\n    \"points\": 0,\n    \"imageUrl\": \"https://example.com/kevin_magnussen.jpg\"\n  },\n  {\n    \"name\": \"Sebastian Vettel\",\n    \"team\": \"Aston Martin\",\n    \"nationality\": \"German\",\n    \"points\": 0,\n    \"imageUrl\": \"https://example.com/sebastian_vettel.jpg\"\n  }\n]\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/drivers/bulk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"drivers",
+						"bulk"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
